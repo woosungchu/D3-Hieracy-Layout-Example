@@ -9,9 +9,13 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT,'static/')
 def index():
     return render_template('index.html')
 
-@app.route('/app/<seq>')
-def seq(seq):
-    return render_template(seq+'.html')
+@app.route('/example.html')
+def example():
+    return render_template('example.html')
+
+@app.route('/layout/<file>')
+def seq(file):
+    return render_template('layout/'+file)
 
 if __name__ == '__main__':
     app.run()
