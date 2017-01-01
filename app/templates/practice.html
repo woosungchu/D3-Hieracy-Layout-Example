@@ -1,10 +1,13 @@
 {% extends "base.html" %}
-<!--
 
+<!-- References
+
+1.basic
 https://egghead.io/lessons/d3-install-and-configure-d3-v4
+
 
 -->
 {% block script %}
-<script type="text/javascript" src="{{ url_for('static', filename='basic.js') }}"></script>
-<link rel="stylesheet" href="{{ url_for('static', filename='basic.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename=url+'.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename=url+'.css') }}">
 {% endblock %}

@@ -5,50 +5,9 @@
       from
       <a href="http://bl.ocks.org/ganeshv">ganeshv</a>
     </li>
-    <li>
-      <a href="practice.html">
-        practice
-      </a>
-    </li>
-    <li>
-      <a href="layout/treemap.html">
-        d3.layout.treemap
-      </a>
-    </li>
-    <li>
-      <a href="layout/tree.html">
-        d3.layout.tree
-      </a>
-    </li>
-    <li>
-      <a href="layout/pack.html">
-        d3.layout.pack
-      </a>
-    </li>
-    <li>
-      <a href="layout/partition.html">
-        d3.layout.partition
-      </a>
-    </li>
-    <li>
-      <a href="layout/force.html">
-        d3.layout.force
-      </a>
-    </li>
-    <li>
-      <a href="layout/bundle.html">
-        d3.layout.bundle
-      </a>
-    </li>
-    <li>
-      <a href="layout/voronoi.html">
-        d3.layout.voronoi
-      </a>
-    </li>
-    <li>
-      <a href="layout/chord.html">
-        d3.layout.chord
-      </a>
-    </li>
+    
+    {% for item in urls %}
+        <li><a href="{{ item }}">{{ item }}</a></li>
+    {% endfor %}
   </ul>
 </div>
