@@ -1,13 +1,22 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>D3 practice</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
 
-<!-- References
+  <!-- References
 
-1.basic
-https://egghead.io/lessons/d3-install-and-configure-d3-v4
+  1.basic
+  https://egghead.io/lessons/d3-install-and-configure-d3-v4
 
+  -->
 
--->
-{% block script %}
-<script type="text/javascript" src="{{ url_for('static', filename=url+'.js') }}"></script>
-<link rel="stylesheet" href="{{ url_for('static', filename=url+'.css') }}">
-{% endblock %}
+  <script type="text/javascript" src="{{ url_for('static', filename=url+'.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename=url+'.css') }}">
+
+</body>
+</html>
