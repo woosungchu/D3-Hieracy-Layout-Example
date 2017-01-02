@@ -5,17 +5,13 @@ app = Flask(__name__)
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT,'static/')
 
-URLS  = ['basic','selections','datajoins']
+URLS  = ['basic','selections','datajoins','enterexit']
 """
   1.basic
   https://egghead.io/lessons/d3-install-and-configure-d3-v4
 
-  2.selection 2017-01-01
-  http://d3indepth.com/selections/
-
-  3.Data joins
-  http://d3indepth.com/datajoins/
-
+  2.selection ,Datajoins, enterexit
+  http://d3indepth.com/
 
  """
 

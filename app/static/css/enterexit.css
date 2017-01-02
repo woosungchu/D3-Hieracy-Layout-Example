@@ -1,0 +1,28 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+.content div {
+	display: inline-block;
+	margin: 10px;
+	background-color: orange;
+	color: white;
+	padding: 30px;
+	width: 10px;
+	height: 10px;
+	text-align: center;
+}
+
+.small-content div{
+  display: inline-block;
+  background-color: orange;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  
+  width: 3px;
+  height: 3px;
+	padding: 20px;
+  margin: 3px;
+}
