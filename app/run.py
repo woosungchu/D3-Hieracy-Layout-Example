@@ -10,7 +10,7 @@ URLS  = ['basic','selections','datajoins','enterexit']
   1.basic
   https://egghead.io/lessons/d3-install-and-configure-d3-v4
 
-  2.selection ,Datajoins, enterexit, shapes  (chater 'scales' is meaningless)
+  2.selection ,Datajoins, enterexit  (chater 'scales','shapes' is boring)
   http://d3indepth.com/
 
  """
