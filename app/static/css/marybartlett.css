@@ -1,0 +1,32 @@
+.node--red {
+    stroke: $status-red;
+    fill: $status-red;
+}
+
+.node--amber {
+    stroke: $status-amber;
+    fill: $status-amber;
+}
+
+.node--green {
+    stroke: $status-green;
+    fill: $status-green;
+}
+
+.node {
+    cursor: pointer;
+}
+
+.node circle {
+    stroke-width: 1.5px;
+}
+
+.node .text {
+    font: 10px sans-serif;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
