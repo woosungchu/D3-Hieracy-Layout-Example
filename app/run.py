@@ -5,17 +5,8 @@ app = Flask(__name__)
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT,'static/')
 
-URLS  = ['basic','selections','datajoins','enterexit','marybartlett','hierarchy','d3noob']
-"""
-  1.basic
-  https://egghead.io/lessons/d3-install-and-configure-d3-v4
-
-  2.selection ,Datajoins, enterexit  (chater 'scales','shapes' is boring)
-  http://d3indepth.com/
-
-  3.
-
- """
+URLS  = ['basic','selections','datajoins','enterexit','marybartlett','d3noob'
+        ,'hierarchy', 'treemap']
 
 @app.route('/')
 def index():

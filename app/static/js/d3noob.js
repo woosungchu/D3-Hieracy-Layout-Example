@@ -42,15 +42,15 @@ var margin = {top: 20, right: 90, bottom: 30, left: 90},
 
 // declares a tree layout and assigns the size
 var treemap = d3.tree()
-    .size([height, width]);
+    .size([width,height]);
 
 //  assigns the data to a hierarchy using parent-child relationships
-var nodes = d3.hierarchy(treeData, function(d) {
+var hierarchy = d3.hierarchy(treeData, function(d) {
     return d.children;
   });
 
 // maps the node data to the tree layout
-nodes = treemap(nodes);
+var nodes = treemap(hierarchy);
 
 // append the svg object to the body of the page
 // appends a 'group' element to 'svg'
