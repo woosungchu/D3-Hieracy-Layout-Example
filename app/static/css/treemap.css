@@ -2,6 +2,10 @@
   font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.node text {
+  display: block;
+}
+
 .link {
   stroke: steelblue;
   stroke-opacity: .6;
