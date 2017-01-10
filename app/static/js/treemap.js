@@ -70,6 +70,7 @@ var node = g.selectAll('.node')
               });
     node.append('text')
           .attr('dy','-0.5em')
+          .attr('class','node-text')
           .style('text-anchor', 'end')
           .text(function(d){ return d.data.name });
 
@@ -152,24 +153,24 @@ function update(data){
               + ' ' + d.parent.y + "," + d.parent.x ;
           });
 
-      node.enter().append('g')
-            .merge(node)
-            .transition()
-            .duration(1000)
-            .attr('transform',function(d){
-              return 'translate('+ d.y + ',' + d.x + ')';
-            })
-            .attr('class','node')
-            .select(function(){
-              if(this.getElementsByTagName('text').length > 0){
-                return this.getElementsByTagName('text')[0];
-              }else{
-                return this.appendChild(d3.creator("text"));
-              }
-            })
-            .attr('dy','-0.5em')
-            .style('text-anchor', 'end')
-            .text(function(d){ return d.data.name });
+
+var g = node.enter().append('g').attr('class','node');
+
+    //new Data
+    g.append('text')
+      .attr('dy','-0.5em')
+      .style('text-anchor', 'end')
+
+    //merge and relocate
+    g.merge(node)
+      .attr('transform',function(d){
+        return 'translate('+ d.y + ',' + d.x + ')';
+      })
+      .transition()
+      .duration(5000)
+      .select('text')
+      .text(function(d){ return d.data.name });
+
 }
 
 svg.attr('onclick', 'update(updateData)');
