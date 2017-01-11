@@ -8,13 +8,17 @@
   <script src="https://cdn.jsdelivr.net/lodash/4.15.0/lodash.min.js"></script>
 </head>
 <body>
+  {% if url=='treeclustertransition' %}
+  <form>
+    <label><input type="radio" name="mode" value="cluster" checked> Dendrogram</label>
+    <label><input type="radio" name="mode" value="tree"> Tree</label>
+  </form>
+  <svg width="960" height="2400"></svg>
+  {% endif %}
 
   <script type="text/javascript" src="{{ url_for('static', filename='js/'+url+'.js') }}"></script>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/'+url+'.css') }}">
 
-  {% if url=='ramnathv' %}
-
-  {% endif %}
 
 </body>
 </html>
