@@ -16,6 +16,10 @@
   <svg width="960" height="2400"></svg>
   {% endif %}
 
+  {% if url=='radialtree' %}
+  <svg width="960" height="1060"></svg>
+  {% endif %}
+
   <script type="text/javascript" src="{{ url_for('static', filename='js/'+url+'.js') }}"></script>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/'+url+'.css') }}">
 

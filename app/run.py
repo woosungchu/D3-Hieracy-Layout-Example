@@ -6,7 +6,7 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT,'static/')
 
 URLS  = ['basic','selections','datajoins','enterexit','marybartlett','d3noob'
-        ,'hierarchy', 'treemap','treeclustertransition']
+        ,'hierarchy', 'treemap','treeclustertransition','radialtree']
 
 @app.route('/')
 def index():
