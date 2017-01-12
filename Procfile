@@ -1,1 +1,1 @@
-web: python app/run.py 0.0.0.0:$PORT
+web: python app/run.py
