@@ -10,4 +10,5 @@ Trello - <https://trello.com/b/iAXTjgMd/mindmap>
 - https://bl.ocks.org/d3noob/76d6fa0dff4af77544da9dd69aef9249 (Tree diagram in v4)
 - https://bl.ocks.org/mbostock/e9ba78a2c1070980d1b530800ce7fa2b (tree and cluster)
 - http://jsfiddle.net/ramnathv/gm9cbcq4/ (trasition)
-- https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/transform (transform-translate)
+- https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/transform (svg.transform-translate)
+- https://developer.mozilla.org/ko/docs/Web/SVG/Tutorial/Paths (svg.path.d)
