@@ -1,8 +1,8 @@
 #D3-Hieracy-Layout-Example
 created by [woosungchu](https://github.com/woosungchu)
 
-####private links
-Trello - <https://trello.com/b/iAXTjgMd/mindmap>
+####DEMO
+https://d3-practice.herokuapp.com/
 
 ####References
 - http://d3js.org (D3.js official website)
