@@ -5,8 +5,9 @@ app = Flask(__name__)
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT,'static/')
 
-URLS  = ['basic','selections','datajoins','enterexit','marybartlett','d3noob'
-        ,'hierarchy', 'treemap','treeclustertransition','radialtree']
+URLS  = ['basic','selections','datajoins','enterexit','marybartlett'
+        ,'d3noob','hierarchy', 'treemap','treeclustertransition','radialtree'
+        ,'indentedtree']
 
 @app.route('/')
 def index():
@@ -18,7 +19,7 @@ def practice(url):
         return render_template('example.html')
 
     #static
-    elif url.endswith('.csv'):
+    elif url.endswith('.csv') or url.endswith('.json'):
         return app.send_static_file(url)
 
     return render_template('practice.html', url=url)
