@@ -7,7 +7,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT,'static/')
 
 URLS  = ['basic','selections','datajoins','enterexit','marybartlett'
         ,'d3noob','hierarchy', 'treemap','treeclustertransition','radialtree'
-        ,'indentedtree']
+        ,'indentedtree','divmap']
 
 @app.route('/')
 def index():
