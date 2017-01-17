@@ -13,3 +13,4 @@ https://d3-practice.herokuapp.com/
 - https://developer.mozilla.org/ko/docs/Web/SVG/Attribute/transform (svg.transform-translate)
 - https://developer.mozilla.org/ko/docs/Web/SVG/Tutorial/Paths (svg.path.d)
 - https://jsfiddle.net/psggohjv/3/(d3 v4 Collapsible Indented Tree)
+- http://thomasrickard.uk/articles/d3---mindmaps-(v4)-13-08-2016.html (Awesome tutorial of side treemap)
