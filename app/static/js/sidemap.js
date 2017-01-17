@@ -1,6 +1,6 @@
 var margin = {top: 20, right: 120, bottom: 20, left: 120},
     width = 1600,
-    height = 800,
+    height = 4800,
     svg = d3.select('body').append('svg')
         .attr('width', width + margin.right + margin.left)
         .attr('height', height + margin.top + margin.bottom);
@@ -58,7 +58,10 @@ function drawTree(root, pos) {
   link.append("path")
     .attr("class", "link")
     .attr("d", function(d) {
-      return "M" + d.target.y + "," + d.target.x + "C" + (d.target.y + d.source.y) / 2.5 + "," + d.target.x + " " + (d.target.y + d.source.y) / 2 + "," + d.source.x + " " + d.source.y + "," + d.source.x;
+      // return "M" + d.target.y + "," + d.target.x + "C" + (d.target.y + d.source.y) / 2.5 + "," + d.target.x + " " + (d.target.y + d.source.y) / 2 + "," + d.source.x + " " + d.source.y + "," + d.source.x;
+      return "M" + d.source.y + "," + d.source.x
+                  + "H" + (d.source.y+ (d.target.y-d.source.y)/2 )
+                  + "V" + d.target.x + "H" + d.target.y;
     });
 
   var node = g.selectAll(".node")
