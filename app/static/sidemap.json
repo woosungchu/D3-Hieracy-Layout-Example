@@ -3,6 +3,7 @@
  "children": [
   {
    "name": "analytics",
+   "detail": "If size is specified, sets this tree layout’s size to the specified two-element array of numbers [width, height] and returns this tree layout. If size is not specified, returns the current layout size, which defaults to [1, 1]. A layout size of null indicates that a node size will be used instead. The coordinates x and y represent an arbitrary coordinate system; for example, to produce a radial layout, a size of [360, radius] corresponds to a breadth of 360° and a depth of radius.",
    "children": [
     {
      "name": "cluster",
@@ -33,6 +34,7 @@
   },
   {
    "name": "animate",
+   "detail": "If size is specified, sets this tree layout’s size to the specified two-element array of numbers [width, height] and returns this tree layout. If size is not specified, returns the current layout size, which defaults to [1, 1]. A layout size of null indicates that a node size will be used instead. The coordinates x and y represent an arbitrary coordinate system; for example, to produce a radial layout, a size of [360, radius] corresponds to a breadth of 360° and a depth of radius.",
    "children": [
     {"name": "Easing", "size": 17010},
     {"name": "FunctionSequence", "size": 5842},
@@ -58,7 +60,8 @@
     {"name": "Transition", "size": 9201},
     {"name": "Transitioner", "size": 19975},
     {"name": "TransitionEvent", "size": 1116},
-    {"name": "Tween", "size": 6006}
+    {"name": "Tween", "size": 6006,
+    "detail": "If size is specified, sets this tree layout’s size to the specified two-element array of numbers [width, height] and returns this tree layout. If size is not specified, returns the current layout size, which defaults to [1, 1]. A layout size of null indicates that a node size will be used instead. The coordinates x and y represent an arbitrary coordinate system; for example, to produce a radial layout, a size of [360, radius] corresponds to a breadth of 360° and a depth of radius."}
    ]
   },
   {

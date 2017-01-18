@@ -1,6 +1,7 @@
 var margin = {top: 20, right: 120, bottom: 20, left: 120},
     width = 1600,
-    height = 4800,
+    height = 800,
+    gap = 10,
     svg = d3.select('body').append('svg')
         .attr('width', width + margin.right + margin.left)
         .attr('height', height + margin.top + margin.bottom);
@@ -10,7 +11,7 @@ d3.json('sidemap.json',function(error,json){
 
   var data = json[0];
 
-  var split_index = Math.round(data.children.length / 2)
+  var split_index =  Math.round(data.children.length / 2);
 
   // Left data
   var data1 = {
@@ -34,14 +35,18 @@ d3.json('sidemap.json',function(error,json){
 
 function drawTree(root, pos) {
 
-  var SWITCH_CONST = 1;
-  if (pos === "left") {
-    SWITCH_CONST = -1;
-  }
+  var flag = (pos === "left") ? -1 : 1;
 
   var g = svg.append('g').attr("transform", "translate(" + width / 2 + ",0)");
 
-  var tree = d3.tree().size([height, SWITCH_CONST * (width - 150) / 2]);
+  var tree = d3.tree()
+                .separation(function(a,b){
+                    var sibling = (a.parent == b.parent);
+                    var hasDetail = b.data.detail !== undefined;
+
+                    return sibling && hasDetail ? gap/2 : 1;
+                })
+                .size([height, flag * (width - 150) / 2]);
 
   tree(root)
 
@@ -58,10 +63,9 @@ function drawTree(root, pos) {
   link.append("path")
     .attr("class", "link")
     .attr("d", function(d) {
-      // return "M" + d.target.y + "," + d.target.x + "C" + (d.target.y + d.source.y) / 2.5 + "," + d.target.x + " " + (d.target.y + d.source.y) / 2 + "," + d.source.x + " " + d.source.y + "," + d.source.x;
       return "M" + d.source.y + "," + d.source.x
-                  + "H" + (d.source.y+ (d.target.y-d.source.y)/2 )
-                  + "V" + d.target.x + "H" + d.target.y;
+          + "H" + (d.source.y+ (d.target.y-d.source.y)/2 )
+          + "V" + d.target.x + "H" + d.target.y;
     });
 
   var node = g.selectAll(".node")
@@ -86,4 +90,29 @@ function drawTree(root, pos) {
     .text(function(d) {
       return d.data.name
     });
+
+    var detail = node.filter(function(d,i){
+                 return d.data.detail !== undefined ? this : null;
+               })
+              .append('text')
+              .attr('class','node-detail')
+              .attr('x',0).attr('y',0).attr('dy',0)
+              .style("text-anchor", "middle");
+
+  	detail.each(function(d){
+    	var str = d.data.detail;
+    	var limit = Math.ceil(str.length / gap);
+      var node = d3.select(this);
+      var textLength = d.data.detail.length / gap;;
+
+      for(var i = 0 ; i < gap + 1 ; i++ ){
+        	var point = textLength * i ;
+
+        	node.append('tspan')
+          		.attr('x','0')
+          		.attr('y', (i*12)+15)
+          		.text(str.slice(point , (point+ textLength)))
+      }
+
+    })
 }
